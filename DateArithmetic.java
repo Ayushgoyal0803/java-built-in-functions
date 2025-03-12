@@ -1,12 +1,18 @@
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.time.format.*;
 
 class DateArithmetic {
     public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
-		System.out.print("Enter a date in DD-MM-YYY format: ");
-		String date = scn.nextLine();
+		try(
+			System.out.print("Enter a date in DD-MM-YYY format: ");
+			String date = scn.nextLine();
+		)catch(DateTimeException e){
+			System.out.print("Entered date is in incorrect format.");
+		}
+		
 		DateTimeFormatter input = DateTimeFormatter.ofPattern("dd-MM-yyyy"); 
 		LocalDate local = LocalDate.parse(date,input);
 		LocalDate modified = local.plusDays(7).plusMonths(1).plusYears(2).minusWeeks(3);
