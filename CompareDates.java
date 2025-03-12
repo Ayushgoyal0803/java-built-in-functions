@@ -52,3 +52,14 @@ class CompareDates {
 		
 	}
 }	
+/*
+Enter first date in DD-MM-YYYY format: 12-02-2025
+Enter second date in DD-MM-YYYY format: 12-03-2025
+12-02-2025 is before the date 12-03-2025
+*/
+
+/*
+Enter first date in DD-MM-YYYY format: 12-03-2025
+Enter second date in DD-MM-YYYY format: 12-03-2025
+Both dates are equal.
+*/
